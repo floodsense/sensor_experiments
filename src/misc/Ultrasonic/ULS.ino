@@ -6,8 +6,8 @@ Sensor: ULS - Waterproof Ultrasonic Sensor
 Connections:
 Pin 1: VCC(Red)    -> 3.3 Volts DC
 Pin 2: Yellow      -> 13 (SCK)
-Pin 3: Blue        -> 10 ()
-Pin 4: Green       -> 11 ()
+Pin 3: Blue        -> 10 (RX)
+Pin 4: Green       -> 11 (TX)
 Pin 5: GND(Black)  -> GND
 
  */
