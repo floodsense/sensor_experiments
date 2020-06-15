@@ -4,10 +4,12 @@ Programmed using C++
 Tested on Arduino Uno - ATmega328
 Sensor: ULS - Waterproof Ultrasonic Sensor
 Connections:
-VCC(Red)     -> 3.3 Volts DC
-GND(Black)   -> GND
-RX(Blue)     -> 12
-TX(Yellow)   -> 13
+Pin 1: VCC(Red)    -> 3.3 Volts DC
+Pin 2: Yellow      -> 13 (SCK)
+Pin 3: Blue        -> 10 ()
+Pin 4: Green       -> 11 ()
+Pin 5: GND(Black)  -> GND
+
  */
 
 /*
@@ -19,7 +21,7 @@ When the Nozzle is installed at 40 cm, the sensor reads 44cm.
 */
 
 #include <SoftwareSerial.h>                     //  Allows serial communication on other digital pins of the Arduino
-SoftwareSerial mySerial(12, 13);                //  Pin 3 (Blue),Pin 2 (Yellow)
+SoftwareSerial mySerial(10, 11);                //  RX, TX
 
 char col;
 unsigned char buffer_RTT[6] = {};               // Buffer to store the sensor output frame
