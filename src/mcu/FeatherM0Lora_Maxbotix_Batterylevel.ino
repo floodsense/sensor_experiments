@@ -202,7 +202,6 @@ void do_send(osjob_t* j) {
 
     LMIC_setTxData2(1, payload, sizeof(payload), 0);
 
-    Serial.println(delta);
     Serial.println(F("Packet queued"));
   }
   // Next TX is scheduled after TX_COMPLETE event.
