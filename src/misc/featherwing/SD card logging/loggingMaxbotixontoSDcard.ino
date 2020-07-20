@@ -60,15 +60,6 @@ void writeToSDCard() {
     char filename[15];
     strcpy(filename, "/SENSOR00.TXT");
 
-    //  for (uint8_t i = 0; i < 100; i++) {
-    //    filename[7] = '0' + i / 10;
-    //    filename[8] = '0' + i % 10;
-    //    // create if does not exist, do not open existing, write, sync after write
-    //    if (! SD.exists(filename)) {
-    //      break;
-    //    }
-    //  }
-
     logfile = SD.open(filename, FILE_WRITE);
 
     if ( ! logfile ) {
