@@ -2,9 +2,9 @@
 #include <SD.h>
 
 // Pin definitions
-#define cardSelect 4
-#define readPin 10
-#define triggerPin 11
+#define cardSelect 10
+#define readPin 11
+#define triggerPin 12
 
 long distance = 0;
 long duration = 0;
@@ -26,19 +26,23 @@ void error(uint8_t errno) {
   }
 }
 
-// This line is not needed if you have Adafruit SAMD board package 1.6.2+
-//   #define Serial SerialUSB
-
 void setup() {
-
-  Serial.begin(115200);
-
-  // see if the card is present and can be initialized:
-  if (!SD.begin(cardSelect)) {
-    Serial.println("Card init. failed!");
-    error(2);
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
   }
-  char filename[15];
+
+   digitalWrite(8, HIGH);
+  Serial.print("Initializing SD card...");
+
+  if (!SD.begin(10)) {
+    Serial.println("initialization failed!");
+    while (1);
+  }
+  Serial.println("initialization done.");
+
+   char filename[15];
   strcpy(filename, "/SENSOR00.TXT");
   for (uint8_t i = 0; i < 100; i++) {
     filename[7] = '0' + i / 10;
@@ -48,7 +52,6 @@ void setup() {
       break;
     }
   }
-
   logfile = SD.open(filename, FILE_WRITE);
   if ( ! logfile ) {
     Serial.print("Couldnt create ");
@@ -65,8 +68,8 @@ void setup() {
 
   delay(3000);
   Serial.println("Setup Ready!");
+  digitalWrite(8, LOW);
 }
-
 void read_sensor() {
 
   digitalWrite(triggerPin, HIGH);
@@ -92,3 +95,4 @@ void loop() {
 
   delay(1000);
 }
+
