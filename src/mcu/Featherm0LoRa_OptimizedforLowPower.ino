@@ -41,19 +41,19 @@
 // first. When copying an EUI from ttnctl output, this means to reverse
 // the bytes. For TTN issued EUIs the last bytes should be 0xD5, 0xB3,
 // 0x70.
-static const u1_t PROGMEM APPEUI[8] = { 0x4A, 0xF9, 0x02, 0xD0, 0x7E, 0xD5, 0xB3, 0x70 };
+static const u1_t PROGMEM APPEUI[8] = { <Enter your key> };
 void os_getArtEui (u1_t* buf) {
   memcpy_P(buf, APPEUI, 8);
 }
 // This should also be in little endian format, see above.
-static const u1_t PROGMEM DEVEUI[8] = { 0x1D, 0x61, 0x11, 0x00, 0x00, 0xB6, 0x76, 0x98 };
+static const u1_t PROGMEM DEVEUI[8] = { <Enter your key> };
 void os_getDevEui (u1_t* buf) {
   memcpy_P(buf, DEVEUI, 8);
 }
 // This key should be in big endian format (or, since it is not really a
 // number but a block of memory, endianness does not really apply). In
 // practice, a key taken from the TTN console can be copied as-is.
-static const u1_t PROGMEM APPKEY[16] = { 0x57, 0xBC, 0x1D, 0xDC, 0xDD, 0x8E, 0xB7, 0x1B, 0xA7, 0xE6, 0xEC, 0x29, 0x67, 0x9D, 0x86, 0xFB };
+static const u1_t PROGMEM APPKEY[16] = { <Enter your key> };
 void os_getDevKey (u1_t* buf) {
   memcpy_P(buf, APPKEY, 16);
 }
@@ -196,12 +196,12 @@ void onEvent (ev_t ev) {
         Serial.println(F(" bytes of payload"));
       }
 
-      //Sleep For a while (currently 6 mins) --> This controls duty cycle
+      // Sleep For a while (currently 6 mins) --> This controls duty cycle
       for (int i = 0; i < sleep_loop_cnt; i++) {
         Watchdog.sleep(8000);
       }
 
-      // Schedule next transmission
+      // Schedule next transmission right now
       os_setTimedCallback(&sendjob, os_getTime() + 1, do_send);
       //os_setTimedCallback(&sendjob, os_getTime()+sec2osticks(TX_INTERVAL), do_send);
       break;
