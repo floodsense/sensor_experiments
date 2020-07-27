@@ -258,11 +258,20 @@ void do_send(osjob_t* j) {
     Serial.println(F("OP_TXRXPEND, not sending"));
   } else {
     // Prepare upstream data transmission at the next possible time.
-
-    mydata[0] = 1;
-    mydata[1] = 2;
-    //mydata[2] = 3;
-    //mydata[3] = 0;
+    // Maxbotix sensor distance readings
+    digitalWrite(triggerPin, HIGH);
+    delayMicroseconds(20);
+    digitalWrite(triggerPin, LOW);
+    duration = pulseIn(readPin, HIGH);
+    distance = duration;
+    byte lowbyte = lowByte(distance);
+    byte highbyte = highByte(distance);
+    mydata[0] = (unsigned char)lowbyte;
+    mydata[1] = (unsigned char)highbyte;
+    Serial.print("Distance = ");
+    Serial.print(distance);
+    Serial.println(" mm");
+    // Battery level
     measuredvbat = analogRead(VBATPIN); //Float
     measuredvbat *= 2;    // we divided by 2, so multiply back
     measuredvbat *= 3.3;  // Multiply by 3.3V, our reference voltage
@@ -285,7 +294,7 @@ void do_send(osjob_t* j) {
 
 void send_callback(void *pUserData, int fSuccess)
 {
-
+  // This is a callback function
   if (!fSuccess)
   {
     Serial.println(F("Send failure"));
