@@ -326,6 +326,8 @@ void setup() {
   LMIC_setLinkCheckMode(0);
   LMIC_setDrTxpow(DR_SF7, 14);
   LMIC_selectSubBand(1);
+  pinMode(triggerPin, OUTPUT);
+  pinMode(readPin, INPUT);
   // Start job (sending automatically starts OTAA too)
   do_send(&sendjob);
   pinMode(13,OUTPUT);
