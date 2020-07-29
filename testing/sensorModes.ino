@@ -45,24 +45,22 @@ byte lowbyte, highbyte, lowbat, highbat;
 // first. When copying an EUI from ttnctl output, this means to reverse
 // the bytes. For TTN issued EUIs the last bytes should be 0xD5, 0xB3,
 // 0x70.
-//static const u1_t PROGMEM APPEUI[8] = { 0x4A, 0xF9, 0x02, 0xD0, 0x7E, 0xD5, 0xB3, 0x70 };
-static const u1_t PROGMEM APPEUI[8] = { 0x4A, 0xF9, 0x02, 0xD0, 0x7E, 0xD5, 0xB3, 0x70 };
+
+static const u1_t PROGMEM APPEUI[8] = {  };
 void os_getArtEui (u1_t* buf) {
   memcpy_P(buf, APPEUI, 8);
 }
 // This should also be in little endian format, see above.
-static const u1_t PROGMEM DEVEUI[8] = { 0x1D, 0x61, 0x11, 0x00, 0x00, 0xB6, 0x76, 0x98 };
-// 1A9952476A5A061A
-//static const u1_t PROGMEM DEVEUI[8] = { 0x1A, 0x77, 0x5E, 0x1C, 0x32, 0x8B, 0x4A, 0x05 } ;
+static const u1_t PROGMEM DEVEUI[8] = { };
+
 void os_getDevEui (u1_t* buf) {
   memcpy_P(buf, DEVEUI, 8);
 }
 // This key should be in big endian format (or, since it is not really a
 // number but a block of memory, endianness does not really apply). In
 // practice, a key taken from the TTN console can be copied as-is.
-static const u1_t PROGMEM APPKEY[16] = { 0x57, 0xBC, 0x1D, 0xDC, 0xDD, 0x8E, 0xB7, 0x1B, 0xA7, 0xE6, 0xEC, 0x29, 0x67, 0x9D, 0x86, 0xFB };
-//48F1E15BE03641C9C60568A97F814471
-//static const u1_t PROGMEM APPKEY[16] = { 0x6A, 0x0E, 0x8F, 0x07, 0x79, 0x92, 0x3D, 0xFB, 0x41, 0x20, 0xD8, 0xEE, 0x59, 0xA8, 0x23, 0x78 };
+static const u1_t PROGMEM APPKEY[16] = {  };
+
 void os_getDevKey (u1_t* buf) {
   memcpy_P(buf, APPKEY, 16);
 }
