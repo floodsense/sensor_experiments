@@ -1,29 +1,17 @@
-/*******************************************************************************
-   Copyright (c) 2015 Thomas Telkamp and Matthijs Kooijman
-   Copyright (c) 2018 Terry Moore, MCCI
-   Permission is hereby granted, free of charge, to anyone
-   obtaining a copy of this document and accompanying files,
-   to do whatever they want with them without any restriction,
-   including, but not limited to, copying, modification and redistribution.
-   NO WARRANTY OF ANY KIND IS PROVIDED.
-   This example sends a valid LoRaWAN packet with payload "Hello,
-   world!", using frequency and encryption settings matching those of
-   the The Things Network. It's pre-configured for the Adafruit
-   Feather M0 LoRa.
-   This uses OTAA (Over-the-air activation), where where a DevEUI and
-   application key is configured, which are used in an over-the-air
-   activation procedure where a DevAddr and session keys are
-   assigned/generated for use with all further communication.
-   Note: LoRaWAN per sub-band duty-cycle limitation is enforced (1% in
-   g1, 0.1% in g2), but not the TTN fair usage policy (which is probably
-   violated by this sketch when left running for longer)!
-   To use this sketch, first register your application and device with
-   the things network, to set or generate an AppEUI, DevEUI and AppKey.
-   Multiple devices can use the same AppEUI, but each device has its own
-   DevEUI and AppKey.
-   Do not forget to define the radio type correctly in
-   arduino-lmic/project_config/lmic_project_config.h or from your BOARDS.txt.
- *******************************************************************************/
+/*  
+ *  This code tests different Sensor Modes on the same end-node using LoRa. The following are 
+ *  the different testing modes. Mode 1, 2 and 3 are different modes of sensing done after 
+ *  scheduling a next uplink where as 4 and 5 are in a relaxed setting i.e. sensing is  
+ *  kept seperate from the scheduling timing.
+ *  
+ *  Testing sensor Modes:
+ *    - Mode 1: default single reading. 
+ *    - Mode 2: 3 - pulse-ins and the last reading is used
+ *    - Mode 3: median of 5 consecutive readings
+ *    - Mode 4: reading in a relaxed setiing
+ *    - Mode 5: median of 5 readings in a relaxed setting
+ *    
+ */
 #include <lmic.h>
 #include <hal/hal.h>
 #include <SPI.h>
@@ -51,7 +39,7 @@ void os_getArtEui (u1_t* buf) {
   memcpy_P(buf, APPEUI, 8);
 }
 // This should also be in little endian format, see above.
-static const u1_t PROGMEM DEVEUI[8] = { };
+static const u1_t PROGMEM DEVEUI[8] = {  };
 
 void os_getDevEui (u1_t* buf) {
   memcpy_P(buf, DEVEUI, 8);
@@ -117,6 +105,7 @@ const lmic_pinmap lmic_pins = {
 #else
 # error "Unknown target"
 #endif
+
 void printHex2(unsigned v) {
   v &= 0xff;
   if (v < 16)
@@ -225,7 +214,6 @@ void onEvent (ev_t ev) {
 
       // Sleep now
       sleepnow();
-      //delay(2000);
 
       // Change testing mode
       changesensorMode();
@@ -236,7 +224,6 @@ void onEvent (ev_t ev) {
 
       // Schedule next transmission right now and also prepares packet for modes 1 2 and 3
       os_setTimedCallback(&sendjob, os_getTime() + sec2osticks(1), do_send);
-      //os_setTimedCallback(&sendjob, os_getTime()+sec2osticks(TX_INTERVAL), do_send);
 
       break;
     case EV_LOST_TSYNC:
@@ -534,8 +521,6 @@ void do_send(osjob_t* j) {
     mydata[4] = (unsigned char)sensorMode;
     LMIC_setTxData2(1, mydata, sizeof(mydata), 0);
     Serial.println(F("Packet queued"));
-    //    // Change testing mode for next packet
-    //    changesensorMode();
   }
   // Next TX is scheduled after TX_COMPLETE event.
 }
