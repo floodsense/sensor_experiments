@@ -14,8 +14,8 @@
  *   Note: This sensor has some Nozzle Correction
  */
 
-#define readPin 10
-#define triggerPin 11
+#define readPin 11
+#define triggerPin 12
 
 long distance = 0;
 long duration = 0;
