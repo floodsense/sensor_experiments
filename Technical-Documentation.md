@@ -11,7 +11,6 @@ The sensor is of the dimensions 5” x 4” x 4”. Using metal straight brace b
 <img src="img\sensor-v1-front.jpg" width="480">
 
 <br />
-<br />
 
 The sensor uses a high-end ultrasonic range sensor, the MB7389 from Maxbotix, which provides range detection from 30-500 cm with an accuracy of ±3 mm. The sensor can be pole or wall mounted. The sensor is battery powered with solar energy harvesting for extended operation. Connectivity is provided via a LoRaWAN system described in the following sections. The solar panels are installed at an angle for optimal solar power using metal brackets. The sensor will typically upload data every 30 mins with faster update rates when flood water is detected. A complete list of BOM with suppliers is mentioned below.
 
@@ -55,18 +54,15 @@ Using single core wire as antenna:
 
 <img src="img\single-core-wireas-antenna.jpg" width="480" >
 <br />
-<br />
 
 And the other components used are SD feather wing, male long headers and a coin cell battery.
 
 <img src="img\mcu-components-2.jpg" width="480" >
 <br />
-<br />
 
 Solder the antenna onto the ANT pad on the very right hand edge of the sensor. Using the male headers solder the SD feather wing onto the feather m0 module and mount this onto the connector board and fix it onto the mounting board of the housing.
 
 <img src="img\assembled-mcu.jpg" width="480" >
-<br />
 <br />
 
 Finally the coin cell and SD card goes into the SD feather wing.
@@ -76,7 +72,6 @@ Finally the coin cell and SD card goes into the SD feather wing.
 Two holes need to be drilled into the housing. The first hole is to mount the Ultrasonic sensor and this needs to be at the center of the mounting side for constant and reliable readings. The second hole is next to the first one to accommodate the wire connecting the solar panel.
 
 <img src="img\drilling.jpg" width="480" >
-<br />
 <br />
 
 #### Step 3: Mounting MCU into the housing
@@ -88,7 +83,6 @@ Connect the ultrasonic sensor to the MCU and screw it using a ¾” lock nut.
 
 <img src="img\mounted-mcu-us.jpg" width="480" >
 <br />
-<br />
 
 #### Step 5: Mounting the Solar Panel
 
@@ -96,18 +90,15 @@ Since the solar panel sits outside, it is always a good measure to use heat sink
 
 <img src="img\solar-panel-withboard.jpg" width="480" >
 <br />
-<br />
 
 Now run the wire back from the solar panel through the smaller hole and use a PG-7 cable gland to waterproof the opening.
 
 <img src="img\gland-bottom.jpg" width="480" >
 <br />
-<br />
 
 Further, solder the solar panel onto the solar battery charger and stick the solar battery charger onto the side wall to make space for the battery.
 
 <img src="img\solarboard-ontheside.jpg" width="480" >
-<br />
 <br />
 
 
@@ -117,11 +108,9 @@ Using an aluminum corner bracket, the solar panel is mounted at an angle for max
 
 <img src="img\panel-mounted.jpg" width="480" >
 <br />
-<br />
 
 
 <img src="img\final-withoutbatt.jpg" width="480" >
-<br />
 <br />
 
 Now we are ready for battery plug in!
