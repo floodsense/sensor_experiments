@@ -4,10 +4,10 @@
  *   Tested on Arduino - ATmega328, Adafruit Feather M0
  *   Sensor: A02YYUW
  *   Connections:
- *      Pin 2  ->  Pin 10 MCU
- *      Pin 4  ->  Pin 11 MCU
- *      VCC    ->  VCC
- *      GND    ->  GND
+ *      Pin 2 (readPin)     ->  Pin 11 MCU
+ *      Pin 4 (triggerPin)  ->  Pin 12 MCU
+ *      VCC                 ->  VCC
+ *      GND                 ->  GND
  *   Sensor operating mode: Trigger
  *     Pin 4 of the sensor is te trigger pin and needed to be connected to LOW. When you 
  *     want to take a reading, you have to pull this pin HIGH for a minimum of 20 microseconds.
