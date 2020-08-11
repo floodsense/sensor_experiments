@@ -8,6 +8,7 @@
 
 long distance = 0;
 long duration = 0;
+char filename[15];
 
 File logfile;
 
@@ -20,10 +21,36 @@ void setup() {
   }
 
   pinMode(13, OUTPUT);
+  digitalWrite(13, LOW);
   pinMode(triggerPin, OUTPUT);
   pinMode(readPin, INPUT);
   digitalWrite(triggerPin, LOW);
-
+  digitalWrite(8, HIGH);
+  Serial.print("Initializing SD card...");
+  if (!SD.begin(cardSelect)) {
+    Serial.println("initialization failed!");
+  } else {
+    Serial.println("initialization done.");
+    strcpy(filename, "/SENSOR00.TXT");
+    for (uint8_t i = 0; i < 100; i++) {
+      filename[7] = '0' + i / 10;
+      filename[8] = '0' + i % 10;
+      // create if does not exist, do not open existing, write, sync after write
+      if (! SD.exists(filename)) {
+        break;
+      }
+    }
+    logfile = SD.open(filename, FILE_WRITE);
+    if ( ! logfile ) {
+      Serial.print("Couldnt create ");
+      Serial.println(filename);
+    } else {
+      logfile.flush();
+      logfile.close();
+      Serial.print("Successfully created log file: "); Serial.println(filename);
+    }
+  }
+  digitalWrite(8, LOW);
   delay(3000);
   Serial.println("Setup Ready!");
 }
@@ -46,45 +73,44 @@ void print_data() {
 }
 
 
-void writeToSDCard() {
+void writeToSDCard(String string_tobe_written) {
 
   // The CS pin on Feather m0 LoRa board is shared by the radio module and should be pulled HIGH
   // before using and set back to LOW for the radio to work.
   digitalWrite(8, HIGH);
+  digitalWrite(13,HIGH);
   Serial.print("Initializing SD card...");
-
-  if (!SD.begin(10)) {
+  if (!SD.begin(cardSelect)) {
     Serial.println("initialization failed!");
   } else {
     Serial.println("initialization done.");
-    char filename[15];
-    strcpy(filename, "/SENSOR00.TXT");
-
     logfile = SD.open(filename, FILE_WRITE);
-
     if ( ! logfile ) {
-      Serial.print("error opening ");
+      Serial.print("Error opening ");
       Serial.println(filename);
+    } else {
+      logfile.println(string_tobe_written);
+      Serial.println("Done writing to SD Card");
+      //flush after write but to note it takes extra power
+      logfile.flush();
+      logfile.close();
     }
-
-    logfile.print("Dist = "); logfile.println(distance);
-    Serial.println("Writing to SD Card");
-    Serial.print("Dist = "); Serial.println(distance);
-    //flush after write but to note it takes extra power
-    logfile.flush();
-    logfile.close();
-    digitalWrite(8, LOW);
   }
+  digitalWrite(8, LOW);
+  digitalWrite(13, LOW);
 }
 
 void loop() {
 
   // Read the sensor data
   read_sensor();
+  print_data();
+
+  String string_tobe_written = String(distance);
+  string_tobe_written = String ("The distance is: " + string_tobe_written);
 
   //Write to SD Card
-  writeToSDCard();
+  writeToSDCard(string_tobe_written);
 
   delay(1000);
 }
-
