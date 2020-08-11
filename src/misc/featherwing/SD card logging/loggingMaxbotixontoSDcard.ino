@@ -1,3 +1,11 @@
+/*  
+*   This example code demonstrates how to log the read sensor values onto SD Card.
+*   The function "writeToSDCard" writes to SD card and takes in a single string as an 
+*   argument for simplicity.
+*   More on string operations: 
+*   https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/
+*/
+
 #include <SPI.h>
 #include <SD.h>
 
@@ -105,7 +113,8 @@ void loop() {
   // Read the sensor data
   read_sensor();
   print_data();
-
+  
+  //The String to be written must be a single string and can be concatenated using different arduino string declerations
   String string_tobe_written = String(distance);
   string_tobe_written = String ("The distance is: " + string_tobe_written);
 
