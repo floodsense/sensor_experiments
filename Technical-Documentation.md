@@ -88,7 +88,7 @@ Connect the ultrasonic sensor to the MCU and screw it using a ¾” lock nut.
 
 Since the solar panel sits outside, it is always a good measure to use heat sinks and potting for waterproofing the contacts on the back.
 
-<img src="img\solar-panel-withboard.jpg" width="480" >
+<img src="img\solar-panel-waterproofed.jpg" width="480" >
 <br />
 
 Now run the wire back from the solar panel through the smaller hole and use a PG-7 cable gland to waterproof the opening.
