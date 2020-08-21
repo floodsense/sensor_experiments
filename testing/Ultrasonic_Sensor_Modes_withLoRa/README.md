@@ -8,7 +8,7 @@ Mode 1: Single pulseIn(trigger) and single reading (regular reading)
 Mode 2: Three pulseIns(triggers) and read at the end of final pulseIn   
 Mode 3: Median of 5 regular readings    
 
-**Results:** 
+**Results:**      
 <img src="img/mode1vs2_mode1vs3.png" >
 <br />
 
@@ -17,7 +17,7 @@ Further two of these modes (Mode 1 and Mode 3) are kept separate from lmic timin
 Mode 4: regular reading in a relaxed setting    
 Mode 5: Median of 5 regular readings in relaxed Setting
 
-**Results:**  
+**Results:**      
 <img src="img/mode1vs4andmode1vs5.png">
 <br />
 
