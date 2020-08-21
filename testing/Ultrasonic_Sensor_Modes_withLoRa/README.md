@@ -1,6 +1,6 @@
 ### Ultrasonic Sensor Modes:
 
-**Ultrasonic sensor used:** MB7389 HRXL-MaxSonar-WRMT [(link)](https://www.maxbotix.com/Ultrasonic_Sensors/MB7389.htm)
+**Ultrasonic sensor used:** MB7389 HRXL-MaxSonar-WRMT [(link)](https://www.maxbotix.com/Ultrasonic_Sensors/MB7389.htm) 
 
 The HRXL-MaxSonar-WR use an internal filter to process range data. However, there are still particular reflections that can cause some [surprised clutter!](https://www.maxbotix.com/tutorials2/103-cube-corner-reflectors.htm) Since the sensor is supposed to go in the real world, we have tested this sensor in laboratory and experimental environments and the occurrence of clutter is likely to happen one or two readings out of a 100 (readings taken every two minutes). Therefore the following five modes that have been tested to reduce this clutter.
 
@@ -9,7 +9,7 @@ Mode 2: Three pulseIns(triggers) and read at the end of final pulseIn
 Mode 3: Median of 5 regular readings    
 
 **Results:**      
-![](https://github.com/floodsense/sensor_experiments/blob/master/img/mode1vs2_mode1vs3.png)
+![](https://github.com/floodsense/sensor_experiments/blob/Praneethsvch-patch-1/img/mode1vs2_mode1vs3.png?raw=true)
 <br />
 
 Further two of these modes (Mode 1 and Mode 3) are kept separate from lmic timing and hence in a "relaxed" setting.
@@ -18,7 +18,7 @@ Mode 4: regular reading in a relaxed setting
 Mode 5: Median of 5 regular readings in relaxed Setting
 
 **Results:** 
-![](https://github.com/floodsense/sensor_experiments/blob/master/img/mode1vs4andmode1vs5.png)
+![](https://github.com/floodsense/sensor_experiments/blob/Praneethsvch-patch-1/img/mode1vs4andmode1vs5.png?raw=true)
 <br />
 
 **Observations:**
