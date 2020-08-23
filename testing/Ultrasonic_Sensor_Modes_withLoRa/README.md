@@ -23,5 +23,5 @@ Mode 5: Median of 5 regular readings in relaxed Setting
 
 **Observations:**
 
-1. The median of 5 readings has a smoother curve and lesser peaks when compared with the others.     
+1. The Mode 5, median of 5 readings has a smoother curve and lesser peaks when compared with the other modes.     
 2. Also to note, the drift of the ultrasonic sensor readings over time due to the change in temperature. Even though this particular sensor model has internal temperature compensation, there is still drift in the sensor readings. This can be observed from the fact that when there is direct sunlight during the day the readings are increased because the direct sunlight is raising the temperature of the sensor housing which is erroneously inflating the internal temperature of sensor reading. The internal temperature compensation algorithm is then over compensating for the inflated temperature and returning an increased distance measure. 
