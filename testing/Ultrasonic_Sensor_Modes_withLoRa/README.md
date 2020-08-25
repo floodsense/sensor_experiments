@@ -30,5 +30,5 @@ There is a notable drift of the ultrasonic sensor readings over time due to the 
 
 The following is the ultrasonic sensor readings vs temperature over a period of 24 hours.     
 
-![](https://github.com/floodsense/sensor_experiments/blob/master/img/UltrasonicvsTemp_aug22nd.png)
+![](https://github.com/floodsense/sensor_experiments/blob/master/img/UltrasonicvsTemp_aug22nd_.png)
 <br />
