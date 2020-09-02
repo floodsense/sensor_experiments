@@ -104,7 +104,7 @@ Further, solder the solar panel onto the solar battery charger and stick the sol
 
 #### Step 6: Final assembly of the sensor
 
-Using an aluminum corner bracket, the solar panel is mounted at an angle for maximum solar radiation.
+Using an aluminum corner bracket, the solar panel is mounted at an angle for optimal amount of solar radiation.
 
 <img src="img\panel-mounted.jpg" width="480" >
 <br />
