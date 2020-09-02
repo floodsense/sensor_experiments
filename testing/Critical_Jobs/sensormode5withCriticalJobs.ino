@@ -126,6 +126,7 @@ void writeToSDCard(String string_tobe_written) {
       //flush after write but to note it takes extra power
       logfile.flush();
       logfile.close();
+      SD.end();
     }
   }
   digitalWrite(8, LOW);
