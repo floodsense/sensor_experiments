@@ -24,8 +24,8 @@ Ultrasonic sensors measure the distance to an object by measuring the time diffe
 
 | Model  | Link |
 | ------------- | ------------- |
-| Maxbotix ultrasonic sensors <br /> <img src="img/HRXL-MaxSonar-Family.jpg" width="480" height = "420">  | [here](https://www.maxbotix.com/Ultrasonic_Sensors.htm)  |
-| ULS ultrasonic sensor <br /> <img src="img/ULS.jpg" width="480" height = "360"> | [here](https://www.dfrobot.com/product-1889.html) |
+| Maxbotix ultrasonic sensors <br /> <img src="img/HRXL-MaxSonar-Family.jpg" width="360" height = "270">  | [here](https://www.maxbotix.com/Ultrasonic_Sensors.htm)  |
+| ULS ultrasonic sensor <br /> <img src="img/ULS.jpg" width="360" height = "270"> | [here](https://www.dfrobot.com/product-1889.html) |
 
 ### Pressure based
 
@@ -33,7 +33,7 @@ Pressure transducer sensors have a sensing element of constant area which respon
 
 | Model  | Link |
 | ------------- | ------------- |
-| Digital Pressure Sensor - MS5540CM <br /> <img src="img/pressure-sensor-ms5540c.jpg" width="480" height = "360" >  | [here](https://www.amazon.com/MS5540-CM-10-1100mbar-2-2V-3-6-Digital-Pressure/dp/B074KF8ZQQ)  |
+| Digital Pressure Sensor - MS5540CM <br /> <img src="img/pressure-sensor-ms5540c.jpg" width="360" height = "270" >  | [here](https://www.amazon.com/MS5540-CM-10-1100mbar-2-2V-3-6-Digital-Pressure/dp/B074KF8ZQQ)  |
 
 ### Resistive based
 
@@ -44,7 +44,7 @@ The standard eTape sensor is a fluid level sensor, which works on the principle 
 
 | Model  | Link |
 | ------------- | ------------- |
-| eTape Sensor <br /> <img src="img/eTape.jpg" width="480" height = "360">  | [here](https://www.maxbotix.com/Ultrasonic_Sensors.htm)  |
+| eTape Sensor <br /> <img src="img/eTape.jpg" width="360" height = "270">  | [here](https://www.maxbotix.com/Ultrasonic_Sensors.htm)  |
 
 
 ## Prototypes
