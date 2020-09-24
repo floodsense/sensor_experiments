@@ -6,7 +6,7 @@ This document specifies the sensor design, building instructions, initial deploy
 
 ## Sensor Design and building instructions:
 
-The sensor is of the dimensions 5” x 4” x 4”. Using metal straight brace brackets the sensor can be mounted onto poles, walls and additional mounting hardware depending on the scenario.
+The sensor is of the dimensions 5.1" x 3.1" x 2.8". Using metal straight brace brackets the sensor can be mounted onto poles, walls and additional mounting hardware depending on the scenario.
 
 <img src="img\sensor-v1-front.jpg" width="480">
 
