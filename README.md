@@ -33,7 +33,7 @@ Pressure transducer sensors have a sensing element of constant area which respon
 
 | Model  | Link |
 | ------------- | ------------- |
-| Digital Pressure Sensor - MS5540CM <br /> <img src="img/pressure-sensor-ms5540c.jpg" width="360" height = "270" >  | [here](https://www.amazon.com/MS5540-CM-10-1100mbar-2-2V-3-6-Digital-Pressure/dp/B074KF8ZQQ)  |
+| Digital Pressure Sensor - MS5540CM <br /> <img src="img/pressure-based-ms5540cm.png" width="360" height = "270" >  | [here](https://www.amazon.com/MS5540-CM-10-1100mbar-2-2V-3-6-Digital-Pressure/dp/B074KF8ZQQ)  |
 
 ### Resistive based
 
