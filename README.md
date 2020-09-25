@@ -24,7 +24,7 @@ Ultrasonic sensors measure the distance to an object by measuring the time diffe
 
 | Model  | Link |
 | ------------- | ------------- |
-| Maxbotix ultrasonic sensors <br /> <img src="img/HRXL-MaxSonar-Family.jpg" width="360" height = "270">  | [here](https://www.maxbotix.com/Ultrasonic_Sensors.htm)  |
+| Maxbotix ultrasonic sensors <br /> <img src="img/maxbotix-us-sensor.jpg" width="360" height = "270">  | [here](https://www.maxbotix.com/Ultrasonic_Sensors.htm)  |
 | ULS ultrasonic sensor <br /> <img src="img/ULS.jpg" width="360" height = "270"> | [here](https://www.dfrobot.com/product-1889.html) |
 
 ### Pressure based
