@@ -23,6 +23,7 @@ The sensor uses a high-end ultrasonic range sensor, the MB7389 from Maxbotix, wh
 | [RTC battery](https://www.adafruit.com/product/380)        | $0.95|
 | [SD feather wing](https://www.adafruit.com/product/2922)   | $8.95|
 | [Duponts](https://www.amazon.com/Generic-Breakaway-Headers-Length-Centered/dp/B015KA0RRU/ref=sr_1_2?dchild=1&keywords=long+pin+dupont&qid=1593041308&sr=8-2)|$7.95    |
+| [Voltaic 1.2W solar panel](https://voltaicsystems.com/1-watt-6-volt-solar-panel-etfe/) |$14.00|
 | [Solar board](https://www.amazon.com/Adafruit-Lithium-Polymer-Charger-ADA390/dp/B00OKCSK88/ref=sr_1_24?dchild=1&keywords=ADA390&qid=1599062478&s=electronics&sr=1-24)|$22.90|
 | [Transistors](https://www.amazon.com/WINGONEER-15Values-Transistor-Assortment-2N2222-S9018/dp/B06XSFNYFP/ref=sr_1_3?dchild=1&keywords=2n2222&qid=1593044183&s=electronics&sr=1-3)|$14.50|
 | [Ultrasonic sensor](https://www.robotshop.com/en/maxbotix-maxsonar-weather-resistant-ultrasonic-range-finder.html) | $99.95|
@@ -32,7 +33,7 @@ The sensor uses a high-end ultrasonic range sensor, the MB7389 from Maxbotix, wh
 | [16GB SD card](https://www.amazon.com/SanDisk-Ultra-SDSQUNS-016G-GN3MN-UHS-I-microSDHC/dp/B074B4P7KD/ref=sr_1_4?dchild=1&keywords=sd+card&qid=1593044968&refinements=p_89%3ASamsung%7CSanDisk%2Cp_36%3A1253503011%2Cp_72%3A1248879011&rnid=1248877011&s=pc&sr=1-4)| $6.00|
 | [Mounting plate](https://www.amazon.com/dp/B07G4XYQXX/ref=sspa_dk_detail_2?pd_rd_i=B07G4XYQXX&pd_rd_w=88b7Q&pf_rd_p=a64be657-55f3-4b6a-91aa-17a31a8febb4&pd_rd_wg=WHW9D&pf_rd_r=P2VY3R2D6VFS2DFV2BD2&pd_rd_r=10b85dcb-8399-480c-be22-23432f9786aa&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFTNE43U09LQkRIRkEmZW5jcnlwdGVkSWQ9QTAzMzEyNTcyRzlLVlFNRjBPRzAwJmVuY3J5cHRlZEFkSWQ9QTA4NTczMjJTSzE3NlBDT1RJSCZ3aWRnZXROYW1lPXNwX2RldGFpbF90aGVtYXRpYyZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1) | $11.99|
 | [Lock nut](https://www.amazon.com/Lock-nut-female-75inch-locknut-Spacer/dp/B07QM7S33K/ref=sr_1_2?dchild=1&keywords=3%2F4inch+lock+nut&qid=1593126413&sr=8-2)| $5.99|
-| Grand Total | $279.90|
+| Grand Total | $293.90|
 
 ### Components
 All components are readily available from internet suppliers, primarily NYC based. Figure below labels the core components within the prototype sensor.
