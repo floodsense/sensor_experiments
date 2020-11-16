@@ -17,4 +17,5 @@ void loop() {
   reading = analogRead(analogPin);
   reading = reading* (5.0 / 1023.0);
   Serial.print("Reading is: "); Serial.println(reading);
+  delay(2000);
 }
