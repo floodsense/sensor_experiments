@@ -14,6 +14,6 @@ void setup() {
 }
 
 void loop() {
-  val = analogRead(analogPin);
+  reading = analogRead(analogPin);
   Serial.print("Reading is: "); Serial.println(reading);
 }
