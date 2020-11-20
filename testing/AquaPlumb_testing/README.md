@@ -8,3 +8,7 @@ The AquaPlumb sensors are mounted onto a metal rod, which is a similar scenario 
 <br />
 <br />
 Due to evaporation, the final water level is 13.5 cm. 
+
+Scaled down Aquaplumb ADC values and scaled to mm. Noise looks minimal and resolution seems good at the ~1mm level. The downward trend shows water evaporation over 30 hours resulting in a ~5mm drop in water depth. The calibration of each length of cable was slightly off which explains the slightly different gradients of the short (1m) and long (3m).
+
+![image](https://user-images.githubusercontent.com/5649897/99604098-bfa40300-29d2-11eb-91b2-13618b62586e.png)
