@@ -30,14 +30,9 @@ The sensor uses a high-end ultrasonic range sensor, the MB7389 from Maxbotix, wh
 
 <img src="img\sensor-v1-front.jpg" width="480">
 
-<br />
-
-
 ### Ultrasonic Prototype v2
 
 <img src="img/Streetsignmount.jpg" width="480">
-<br />
-<br />
 
 More documentation on technical details and technology transfer can be found [here](https://github.com/floodsense/sensor_experiments/blob/master/Technical-Documentation.md).
 
