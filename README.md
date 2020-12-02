@@ -19,18 +19,25 @@ Place to house all reports and code related to sensor development and testing fo
          * [TTN Payload Decoder](#ttn-payload-decoder)
 
 ## Prototypes
-### Ultrasonic Prototype v1
 
 #### Sensor Design
 
 The sensor is of the dimensions 5.1" x 3.1" x 2.8". Using metal straight brace brackets the sensor can be mounted onto poles, walls and additional mounting hardware depending on the scenario.
 
+The sensor uses a high-end ultrasonic range sensor, the MB7389 from Maxbotix, which provides range detection from 30-500 cm with an accuracy of ±3 mm. The sensor can be pole or wall mounted. Testing is ongoing to determine the sensors ability to ignore anomalous surface reflections. The sensor is battery powered with solar energy harvesting for extended operation. Connectivity is provided via a LoRaWAN system described in the following sections. The sensor will typically upload data every 30 mins with faster update rates when flood water is detected.
+
+### Ultrasonic Prototype v1
+
 <img src="img\sensor-v1-front.jpg" width="480">
 
 <br />
-<br />
 
-The sensor uses a high-end ultrasonic range sensor, the MB7389 from Maxbotix, which provides range detection from 30-500 cm with an accuracy of ±3 mm. The sensor can be pole or wall mounted. Testing is ongoing to determine the sensors ability to ignore anomalous surface reflections. The sensor is battery powered with solar energy harvesting for extended operation. Connectivity is provided via a LoRaWAN system described in the following sections. The sensor will typically upload data every 30 mins with faster update rates when flood water is detected.
+
+### Ultrasonic Prototype v2
+
+<img src="img/Streetsignmount.jpg" width="480">
+<br />
+<br />
 
 More documentation on technical details and technology transfer can be found [here](https://github.com/floodsense/sensor_experiments/blob/master/Technical-Documentation.md).
 
