@@ -77,3 +77,9 @@ Distance= Data_H*256+ Data_L
 
 **Checksum Calculation:**
 SUM = Header + DATA_H + DATA_L
+
+### Pin connectuions for serial mode
+ - Maxbotix pin 4 to pin 12 of adafruit
+ - Maxbotix pin 5 to pin RX of adafruit
+ - VCC,GND connections have to be completed
+ - Io1 to 6 for LORAWan
