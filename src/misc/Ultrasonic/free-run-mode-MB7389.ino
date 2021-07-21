@@ -10,28 +10,35 @@ void setup() {
   digitalWrite(triggerPin, HIGH);
 }
 
-char endMarker = '\n';
+char endMarker = '\n\n';
 
 void loop() {
-  char serialbuffer[6] = {0};
-  int indx = 0;
+  int distance;
+  char serialbuffer[4];
+  int index = 0;
   char rc;
+  softwareSerial.flush();
   boolean newData = false;
-  while (softwareSerial.available() > 0 && newData == false) {
-    rc = softwareSerial.read();
-    if (rc != endMarker) {
-      serialbuffer[indx] = rc;
-      Serial.println(rc);
-      indx++;
-    }
-    else {
-      newData = true;
+  while (newData == false) {
+    if (softwareSerial.available())
+    {
+      char rc = softwareSerial.read();
+      if (rc == 'R')
+      {
+        while (index < 3)
+        {
+          if (softwareSerial.available())
+          {
+            serialbuffer[index] = softwareSerial.read();
+            index++;
+          }
+        }
+      }
+      newData = true;                        
     }
   }
-  //Serial.println(newData);
   if (newData){
-    int distance = (serialbuffer[1] - '0') * 1000 + (serialbuffer[2] - '0') * 100 + (serialbuffer[3] - '0') * 10 + (serialbuffer[4] - '0');
+    distance = (serialbuffer[0] - '0') * 1000 + (serialbuffer[1] - '0') * 100 + (serialbuffer[2] - '0') * 10 + (serialbuffer[3] - '0');
     Serial.print("distance: "); Serial.print(distance); Serial.println(" mm");
   }
-  newData = false;
 }
